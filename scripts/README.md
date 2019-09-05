@@ -7,5 +7,6 @@
 
 The list of knocked out genes has been produced with the command:
 ```
+featureCounts -a ../ref/CP009273_annotation.gtf -o ../coverage/counts.txt -t CDS aln/*.bam
 python detect.py -i ../coverage/counts.txt -a ../ref/CP009273_annotation.gff  -n 100 
 ```
