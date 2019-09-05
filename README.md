@@ -6,4 +6,4 @@ This repository contains scripts and outputs from a panel of 50 isolates potenti
 
 The WGS output has been aligned against the reference with _bwa_, and the BAM files have been used to produce a matrix of raw counts using _featureCount_ from the _subread_ package.
 
-![Example screenshots](screenshot/strain03_confirmed.png)
+![Example screenshots](screenshots/strain37_confirmed.png)
