@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# Andrea Telatin, QIB, 2019
 import pandas
 import argparse
 import sys
 import gffutils
+
 
 def load_gff(filename, key="gene"):
    """
@@ -35,7 +38,7 @@ def verprint(msg):
         if opt.verbose or opt.debug:
             eprint('* {}'.format(msg))
 
-opt_parser = argparse.ArgumentParser(description='Manipulate feature counts table')
+opt_parser = argparse.ArgumentParser(description='Detect uncovered genes from a featureCounts output matrix done from WGS experiments')
 
 opt_parser.add_argument('-i', '--input',
                         help='Path to featureCounts output',
@@ -130,7 +133,7 @@ for index, row in normdiv.iterrows():
             print('{}\t{}\t{}\t{}\t{}\t{}'.format( geneID, geneName, sampleID, value, median[index], max[index]))
 
 
-print('#Discarded genes:\t{} (< {})\n#Discarded values:\t{}'.format( 
+eprint('#Discarded genes:\t{} (< {})\n#Discarded values:\t{}'.format( 
 	counters['filtered_gene'],
 	(opt.normalizefactor * opt.filter),
 	counters['discarded_value'] )
