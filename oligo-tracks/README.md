@@ -13,7 +13,7 @@ conda install -y bwa samtools covtobed
 The program requires a reference and a set of oligos, both in FASTA format:
 
 ```
-perl align_oligos -r {REFERENCE.fa} -i {OLIGOS.fa} -o {OUTPUT_NAME}
+perl align_oligos.pl -r {REFERENCE.fa} -i {OLIGOS.fa} -o {OUTPUT_NAME}
 ```
 
 The program will create:
