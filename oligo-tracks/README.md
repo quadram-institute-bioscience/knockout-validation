@@ -5,7 +5,7 @@
 The required tools can be installed via Miniconda:
 
 ```
-conda install -y bwa samtools covtobed
+conda install -y bwa samtools covtobed bedtools
 ```
 
 ## Usage
